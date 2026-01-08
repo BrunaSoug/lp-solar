@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Líder Brasil Solar</title>
+    <meta name="description" content="Reduza sua conta de luz em até 95% com a Líder Brasil Solar. Projetos residenciais e empresariais de energia fotovoltaica, instalação certificada e financiamento facilitado. Peça seu orçamento!">
+    <meta name="keywords" content="energia solar, fotovoltaica, painel solar, economia de energia, instalador solar, Líder Brasil Solar">
+    <meta name="author" content="Líder Brasil Solar">
+    <meta name="robots" content="index, follow">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Líder Brasil Solar - Zere sua conta de luz">
+    <meta property="og:description" content="Transforme o sol em economia. Projetos de alta performance com garantia e instalação especializada.">
+    <meta property="og:url" content="https://www.liderbrasilsolar.com.br/"> <meta property="og:site_name" content="Líder Brasil Solar">
+    <meta property="og:image" content="https://solartask.com.br/images/projects/cidades.jpg">
+    <link rel="icon" type="image/png" href="/assets/img/favicon-logo-32x32.png">
+    <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-black': '#0F172A',
+                        'brand-primary': '#F59E0B',
+                        'brand-dark-orange': '#D97706', 
+                        'brand-surface': '#F8FAFC', 
+                    },
+                    boxShadow: {
+                        'soft': '0 20px 40px -10px rgba(0, 0, 0, 0.08)',
+                        'glow': '0 4px 20px rgba(245, 158, 11, 0.4)',
+                        'inner-light': 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .image-mask {
+            mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+            -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+        }
+        .btn-premium {
+            background-image: linear-gradient(135deg, #F59E0B 0%, #EA580C 100%);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .btn-premium::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+            transform: translateX(-100%);
+            transition: 0.5s;
+            z-index: -1;
+        }
+        .btn-premium:hover::before {
+            transform: translateX(100%);
+        }
+        .btn-premium:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(234, 88, 12, 0.5);
+        }
+        .btn-whatsapp {
+            background-color: #25D366;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4);
+        }
+        .btn-instagram {
+            background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-instagram:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(193, 53, 132, 0.4);
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 24px;
+            width: 24px;
+            border-radius: 50%;
+            background: #F59E0B;
+            cursor: pointer;
+            margin-top: -10px;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.2);
+            transition: transform 0.1s;
+        }
+        input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.1); }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 6px;
+            cursor: pointer;
+            background: #E2E8F0;
+            border-radius: 999px;
+        }
+        input[type=range]:focus { outline: none; }
+        .swiper-pagination-bullet-active {
+        background-color: #fff !important; 
+    }
+    .swiper-button-next::after, .swiper-button-prev::after {
+        font-size: 20px !important;
+    }
+    </style>
+</head>
+<body class="bg-white text-brand-black antialiased selection:bg-brand-primary selection:text-white">
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-xl border-b border-gray-100 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-24">
+                <a href="/" class="flex items-center gap-3 group">
+                    <img src="/assets/img/logo-removebg-preview.png" alt="Líder Brasil Solar" class="h-12 w-auto object-contain">
+                    <span class="sr-only">Líder Brasil Solar</span> 
+                </a>
+                <div class="hidden md:flex items-center space-x-10">
+                    <a href="#como-funciona" class="text-sm font-semibold text-gray-600 hover:text-brand-primary transition-colors tracking-wide">Como Funciona</a>
+                    <a href="#solucoes" class="text-sm font-semibold text-gray-600 hover:text-brand-primary transition-colors tracking-wide">Soluções</a>
+                    <a href="#projetos" class="text-sm font-semibold text-gray-600 hover:text-brand-primary transition-colors tracking-wide">Projetos</a>
+                    <a href="#sobre" class="text-sm font-semibold text-gray-600 hover:text-brand-primary transition-colors tracking-wide">A Empresa</a>
+                </div>
+                <div class="hidden md:flex">
+                    <a href="#simulador" class="bg-brand-black text-white px-7 py-3 rounded-lg text-sm font-bold hover:bg-gray-800 transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-0.5">
+                        Simular Investimento
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2 text-gray-600 hover:text-brand-primary transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 top-24 shadow-xl">
+            <div class="px-4 pt-4 pb-6 space-y-2">
+                <a href="#como-funciona" class="block py-3 px-4 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50 hover:text-brand-primary">Como Funciona</a>
+                <a href="#solucoes" class="block py-3 px-4 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50 hover:text-brand-primary">Soluções</a>
+                <a href="#projetos" class="block py-3 px-4 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50 hover:text-brand-primary">Projetos</a>
+                <a href="#sobre" class="block py-3 px-4 rounded-lg text-base font-semibold text-gray-600 hover:bg-gray-50 hover:text-brand-primary">A Empresa</a>
+                <div class="pt-4">
+                    <a href="#simulador" class="block w-full text-center bg-brand-black text-white px-6 py-4 rounded-xl font-bold shadow-lg">
+                        Simular Investimento
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="pt-36 pb-20 lg:pt-48 lg:pb-32 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-8 items-center">
+                <div class="relative z-10 max-w-2xl">
+                    <h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight text-brand-black leading-[1.1] mb-8">
+                        Invista em Energia Solar<br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-dark-orange">& Zere sua conta.</span>
+                    </h1>
+                    <p class="text-lg text-gray-600 mb-10 leading-relaxed font-medium pr-4">
+                        Nossos sistemas de energia solar residencial e empresarial utilizam equipamentos de alta performance, com 25 anos de garantia. Aproveite agora condições especiais com desconto para novos projetos e comece a gerar sua própria energia.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-5">
+                        <a href="#orcamento" class="btn-premium inline-flex justify-center items-center px-8 py-4 text-white font-bold rounded-xl text-lg shadow-glow">
+                            Solicitar Proposta
+                            </a>
+                        <a href="https://api.whatsapp.com/send/?phone=5522999487905&text=Ol%C3%A1%21+Gostaria+de+solicitar+um+or%C3%A7amento+para+um+sistema+de+energia+solar.+Poderiam+me+passar+mais+informa%C3%A7%C3%B5es%2C+por+favor%3F&type=phone_number&app_absent=0" class="btn-whatsapp inline-flex justify-center items-center px-8 py-4 font-bold rounded-xl text-lg shadow-lg">
+                            <svg class="w-6 h-6 mr-3" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.212 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.188.48 1.563.654.673.275 1.409.236 1.996.148.657-.1 2.219-.905 2.53-1.778.312-.873.312-1.621.219-1.778-.095-.157-.347-.253-.644-.402z"/></svg>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                    <div class="mt-14 flex items-center gap-4 text-sm font-medium text-gray-500">
+                        <div class="flex items-center text-yellow-500">★★★★★</div>
+                        <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                        <p>Mais de <strong class="text-brand-black">300 projetos instalados</strong> no RJ.</p>
+                    </div>
+                </div>
+                <div class="relative w-full mt-10 lg:mt-0 min-w-0 overflow-hidden rounded-2xl">
+    <div class="swiper mySwiper h-72 lg:h-[640px] w-full shadow-2xl">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide group relative w-full h-full cursor-grab">
+                <img src="https://solartask.com.br/images/projects/cidades.jpg" alt="Projeto 1" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 lg:bottom-10 lg:left-10 lg:right-10 bg-white/10 backdrop-blur-md p-6 lg:p-8 rounded-xl shadow-soft border border-white/20">
+                    <div class="flex justify-between items-end text-white">
+                        <div>
+                            <p class="text-[10px] lg:text-xs font-bold text-gray-200 uppercase tracking-widest mb-2">Estimativa de Retorno</p>
+                            <div class="text-2xl lg:text-4xl font-bold">R$ 20.520<span class="text-sm lg:text-xl text-gray-300 font-normal">/ano</span></div>
+                        </div>
+                        <div class="bg-white/20 p-2 lg:p-3 rounded-lg backdrop-blur-sm">
+                            <svg class="w-5 h-5 lg:w-6 lg:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide group relative w-full h-full cursor-grab">
+                <img src="https://elysia.com.br/wp-content/uploads/2019/11/DJI_04551-1.jpg" alt="Projeto 2" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
+                <div class="absolute bottom-4 left-4 right-4 lg:bottom-10 lg:left-10 lg:right-10 bg-white/10 backdrop-blur-md p-6 lg:p-8 rounded-xl shadow-soft border border-white/20">
+                    <div class="flex justify-between items-end text-white">
+                       <div>
+                <p class="text-[10px] lg:text-xs font-bold text-gray-200 uppercase tracking-widest mb-2">Impacto Mensal</p>
+                <div class="text-2xl lg:text-4xl font-bold">-95%<span class="text-sm lg:text-xl text-gray-300 font-normal"> na conta de luz</span></div>
+                </div>
+                    <div class="bg-white/20 p-2 lg:p-3 rounded-lg backdrop-blur-sm">
+                        <svg class="w-5 h-5 lg:w-6 lg:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+    </main>
+    <section id="como-funciona" class="py-24 bg-brand-surface relative overflow-hidden">
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-orange-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-96 h-96 bg-blue-100 rounded-full mix-blend-multiply filter blur-3xl opacity-30"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+                <div>
+                    <h2 class="text-3xl lg:text-4xl font-bold text-brand-black mb-6">
+                        Entenda o processo de <br>
+                        <span class="text-brand-primary">Geração de Energia</span>
+                    </h2>
+                    <p class="text-gray-600 mb-10 leading-relaxed text-lg">
+                        O sistema solar fotovoltaico é simples, silencioso e automático. Veja como sua casa passa a produzir a própria energia:
+                    </p>
+                    <div class="space-y-8">
+                        <div class="flex gap-6 group">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-50 text-brand-primary flex items-center justify-center font-bold text-xl group-hover:bg-brand-primary group-hover:text-white transition-colors duration-300">1</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-black mb-2">Captação Solar</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">Os painéis instalados no telhado captam a luz do sol e a transformam em energia elétrica (corrente contínua).</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 group">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-blue-50 text-brand-black flex items-center justify-center font-bold text-xl group-hover:bg-brand-black group-hover:text-white transition-colors duration-300">2</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-black mb-2">Conversão (Inversor)</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">O inversor solar converte essa energia para o padrão da sua casa (corrente alternada), pronta para uso.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-6 group">
+                            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-50 text-green-600 flex items-center justify-center font-bold text-xl group-hover:bg-green-600 group-hover:text-white transition-colors duration-300">3</div>
+                            <div>
+                                <h3 class="text-xl font-bold text-brand-black mb-2">Abatimento na Conta</h3>
+                                <p class="text-gray-500 text-sm leading-relaxed">A energia que você não usa é injetada na rede e vira créditos. À noite, você usa esses créditos para abater a conta.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="simulador" class="relative">
+                    <div class="bg-white p-8 lg:p-10 rounded-3xl shadow-xl border border-gray-100">
+                        <div class="flex items-center gap-3 mb-6">
+                            <div class="w-10 h-10 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                            </div>
+                            <h3 class="text-2xl font-bold text-brand-black">Simule sua Economia</h3>
+                        </div>
+                        <div class="mb-10">
+                            <label class="block text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Valor médio da sua conta de luz</label>
+                            <div class="text-4xl font-extrabold text-brand-black mb-6">
+                                R$ <span id="valor-conta-display">500</span>
+                            </div>
+                            <div class="relative w-full h-6 flex items-center">
+                                <input type="range" min="150" max="5000" value="500" step="50" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer" id="conta-slider">
+                            </div>
+                            <div class="flex justify-between mt-2 text-xs text-gray-400 font-semibold">
+                                <span>R$ 150</span>
+                                <span>R$ 5.000+</span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 bg-brand-surface p-4 rounded-2xl border border-gray-100 shadow-inner-light">
+                            <div>
+                                <p class="text-xs text-gray-500 font-semibold mb-1">Economia Anual</p>
+                                <p class="text-xl lg:text-2xl font-bold text-brand-primary">R$ <span id="economia-anual">5.700</span></p>
+                            </div>
+                            <div>
+                                <p class="text-xs text-gray-500 font-semibold mb-1">Em 25 Anos</p>
+                                <p class="text-xl lg:text-2xl font-bold text-green-600">R$ <span id="economia-total">142.500</span></p>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                        <a 
+                            href="https://api.whatsapp.com/send/?phone=5522999487905&text=Ol%C3%A1%21+Gostaria+de+solicitar+um+or%C3%A7amento+de+energia+solar.+Poderiam+me+passar+mais+informa%C3%A7%C3%B5es%2C+por+favor%3F&type=phone_number&app_absent=0"
+                            target="_blank"
+                            class="w-full py-4 bg-brand-black text-white font-bold rounded-xl shadow-lg hover:bg-gray-800 transition-colors flex items-center justify-center gap-2 group"
+                        >
+                        Quero essa economia
+                        <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                        </a>
+                    <p class="text-center text-xs text-gray-400 mt-4">
+                        *Estimativa baseada em radiação média.
+                    </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-primary font-bold tracking-wider uppercase text-sm">Tipos de Sistema</span>
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-brand-black mt-2">On-Grid ou Off-Grid?</h2>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Entenda a diferença entre as duas tecnologias e descubra qual se adapta melhor à sua necessidade.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 lg:gap-12">
+                <div class="group relative bg-brand-surface rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <svg class="w-24 h-24 text-brand-primary" fill="currentColor" viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                    </div>
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-black mb-3">On-Grid <span class="text-sm font-medium text-gray-500">(Conectado à Rede)</span></h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        É o sistema mais comum em cidades. Ele trabalha conectado à rede elétrica da distribuidora. A energia que sobra vira <strong>créditos</strong> para abater sua conta à noite ou em dias nublados.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-sm text-gray-600"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Menor custo de investimento</li>
+                        <li class="flex items-center text-sm text-gray-600"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Não precisa de baterias</li>
+                        <li class="flex items-center text-sm text-gray-600"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Ideal para reduzir a conta de luz</li>
+                    </ul>
+                </div>
+                <div class="group relative bg-brand-surface rounded-2xl p-8 border border-gray-100 hover:shadow-xl transition-all duration-300">
+                    <div class="absolute top-0 right-0 p-6 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <svg class="w-24 h-24 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z"/></svg>
+                    </div>
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center text-green-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-black mb-3">Off-Grid <span class="text-sm font-medium text-gray-500">(Autônomo)</span></h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Funciona de forma independente, sem conexão com a rua. Utiliza <strong>baterias</strong> para armazenar a energia gerada durante o dia para ser usada à noite.
+                    </p>
+                    <ul class="space-y-3 mb-6">
+                        <li class="flex items-center text-sm text-gray-600"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Independência total da concessionária</li>
+                        <li class="flex items-center text-sm text-gray-600"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Ideal para locais remotos/isolados</li>
+                        <li class="flex items-center text-sm text-gray-600"><svg class="w-5 h-5 text-green-500 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Funciona mesmo se a luz da rua acabar</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="border-t border-gray-100 py-12 bg-white">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+        <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.2em] mb-8">
+            Tecnologia Homologada Pelas Principais Marcas
+        </p>
+        <div class="flex flex-wrap justify-center items-center gap-10 lg:gap-16">
+            <img 
+                src="https://www.liderbrasilsolar.com.br/project-root/assets/images/image5.webp" 
+                alt="WEG" 
+                class="h-8 lg:h-20 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            />
+            <img 
+                src="https://www.liderbrasilsolar.com.br/project-root/assets/images/image4.webp" 
+                alt="Huawei" 
+                class="h-8 lg:h-20 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            />
+            <img 
+                src="https://www.liderbrasilsolar.com.br/project-root/assets/images/3image.webp" 
+                alt="Dah Solar" 
+                class="h-8 lg:h-20 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            />
+            <img 
+                src="https://www.liderbrasilsolar.com.br/project-root/assets/images/1image.webp" 
+                alt="Osda" 
+                class="h-8 lg:h-20 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            />
+            <img 
+                src="https://www.liderbrasilsolar.com.br/project-root/assets/images/5image.webp" 
+                alt="Jinko Solar" 
+                class="h-8 lg:h-20 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            />
+             <img 
+                src="https://www.liderbrasilsolar.com.br/project-root/assets/images/2image.webp" 
+                alt="Ja Solar" 
+                class="h-8 lg:h-20 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            />
+             <img 
+                src="https://www.liderbrasilsolar.com.br/project-root/assets/images/6image.webp" 
+                alt="Sunova Solar" 
+                class="h-8 lg:h-20 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            />
+             <img 
+                src="https://www.liderbrasilsolar.com.br/project-root/assets/images/7image.webp" 
+                alt="Saj" 
+                class="h-8 lg:h-20 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500"
+            />
+        </div>
+    </div>
+</section>
+ <section id="orcamento" class="py-24 bg-brand-black relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-2/3 h-full bg-gray-800/20 -skew-x-12 transform translate-x-32"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-brand-primary/10 rounded-full blur-[100px]"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-brand-primary font-bold tracking-widest uppercase text-sm mb-4 block">Atendimento Exclusivo</span>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-white mb-6 leading-tight">
+                        Receba a sua proposta <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-brand-dark-orange">Personalizada em 24h.</span>
+                    </h2>
+                    <p class="text-lg text-gray-400 mb-8 leading-relaxed">
+                        Não enviamos apenas um preço. Os nossos engenheiros farão uma <strong>análise via satélite</strong> do seu telhado para dimensionar a geração exata que necessita.
+                    </p>
+
+                    <ul class="space-y-6">
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center text-brand-primary mt-1">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-white font-bold text-lg">Estudo de Viabilidade Grátis</h4>
+                                <p class="text-gray-500 text-sm">Calculamos o sombreamento e a inclinação ideal.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-gray-800 flex items-center justify-center text-brand-primary mt-1">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="text-white font-bold text-lg">Cálculo de Payback Real</h4>
+                                <p class="text-gray-500 text-sm">Saiba exatamente em quantos meses o investimento se paga.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-2xl p-8 md:p-10 shadow-2xl relative">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-primary to-brand-dark-orange rounded-t-2xl"></div>
+                    <h3 class="text-2xl font-bold text-brand-black mb-6">Solicite o seu Orçamento</h3>
+                    <form action="#" method="POST" class="space-y-5">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-600 mb-2">Nome Completo</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-brand-black placeholder-gray-400" placeholder="Ex: João Silva" required>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-600 mb-2">E-mail</label>
+                                <input type="email" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-brand-black placeholder-gray-400" placeholder="seu@email.com" required>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-600 mb-2">WhatsApp</label>
+                                <input type="tel" class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-brand-black placeholder-gray-400" placeholder="(22) 99999-9999" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-600 mb-2">Média da Conta de Luz (R$)</label>
+                            <div class="relative">
+                                <select class="w-full px-4 py-3 rounded-lg bg-gray-50 border border-gray-200 focus:border-brand-primary focus:ring-2 focus:ring-brand-primary/20 outline-none transition-all text-brand-black appearance-none cursor-pointer text-gray-600">
+                                    <option value="" disabled selected>Selecione um valor aproximado</option>
+                                    <option value="300-500">Entre R$ 300 e R$ 500</option>
+                                    <option value="500-1000">Entre R$ 500 e R$ 1.000</option>
+                                    <option value="1000-2000">Entre R$ 1.000 e R$ 2.000</option>
+                                    <option value="2000+">Acima de R$ 2.000</option>
+                                </select>
+                                <div class="absolute inset-y-0 right-0 flex items-center px-4 pointer-events-none text-gray-500">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-brand-primary text-white font-bold rounded-lg shadow-lg hover:bg-orange-600 hover:shadow-orange-500/30 transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 mt-2">
+                            Enviar Solicitação
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"></path></svg>
+                        </button>
+                        <p class="text-xs text-center text-gray-400 mt-4">
+                            <svg class="w-3 h-3 inline mr-1" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/></svg>
+                            Os seus dados estão seguros. Não enviamos spam.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="solucoes" class="py-20 bg-gray-50 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl lg:text-4xl font-extrabold text-brand-black mb-4">Soluções para todos os perfis</h2>
+                <p class="text-gray-600 text-lg">Independente do tamanho do seu projeto, temos a solução ideal para você economizar.</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+                    <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-black mb-2">Residências</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Livre-se da inflação energética. Valorize seu imóvel e tenha conforto para usar o ar-condicionado sem culpa.</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5522999487905&text=Ol%C3%A1%21+Gostaria+de+solicitar+um+or%C3%A7amento+de+energia+solar+para+uma+casa.+Poderiam+me+passar+mais+informa%C3%A7%C3%B5es%2C+por+favor%3F&type=phone_number&app_absent=0" class="btn-whatsapp w-full py-3 rounded-lg font-bold flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.212 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.188.48 1.563.654.673.275 1.409.236 1.996.148.657-.1 2.219-.905 2.53-1.778.312-.873.312-1.621.219-1.778-.095-.157-.347-.253-.644-.402z"/></svg>
+                        Orçamento Casa
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+                    <div class="w-14 h-14 bg-brand-primary/10 rounded-xl flex items-center justify-center text-brand-primary mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-black mb-2">Empresas</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Reduza drasticamente o custo fixo do seu negócio. Aumente sua margem de lucro e torne sua empresa sustentável.</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5522999487905&text=Ol%C3%A1%21+Gostaria+de+solicitar+um+or%C3%A7amento+de+energia+solar+para+uma+empresa.+Poderiam+me+passar+mais+informa%C3%A7%C3%B5es%2C+por+favor%3F&type=phone_number&app_absent=0" class="btn-whatsapp w-full py-3 rounded-lg font-bold flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.212 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.188.48 1.563.654.673.275 1.409.236 1.996.148.657-.1 2.219-.905 2.53-1.778.312-.873.312-1.621.219-1.778-.095-.157-.347-.253-.644-.402z"/></svg>
+                        Orçamento Empresa
+                    </a>
+                </div>
+                <div class="bg-white p-8 rounded-2xl shadow-soft hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col">
+                    <div class="w-14 h-14 bg-green-50 rounded-xl flex items-center justify-center text-green-600 mb-6">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-brand-black mb-2">Agronegócio</h3>
+                    <p class="text-gray-600 mb-6 flex-grow">Energia para irrigação, ordenha e processos produtivos. O campo produz, o sol sustenta.</p>
+                    <a href="https://api.whatsapp.com/send/?phone=5522999487905&text=Ol%C3%A1%21+Gostaria+de+solicitar+um+or%C3%A7amento+de+energia+solar+no+ramo+rural.+Poderiam+me+passar+mais+informa%C3%A7%C3%B5es%2C+por+favor%3F&type=phone_number&app_absent=0" class="btn-whatsapp w-full py-3 rounded-lg font-bold flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.212 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.188.48 1.563.654.673.275 1.409.236 1.996.148.657-.1 2.219-.905 2.53-1.778.312-.873.312-1.621.219-1.778-.095-.157-.347-.253-.644-.402z"/></svg>
+                        Orçamento Rural
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="projetos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-end mb-12 gap-6 md:gap-4">
+                <div class="text-center md:text-left">
+                    <h2 class="text-3xl lg:text-4xl font-extrabold text-brand-black mb-2">Obras Realizadas</h2>
+                    <p class="text-gray-600">Confira a qualidade da nossa instalação.</p>
+                </div>
+                <a href="https://www.instagram.com/liderbrasilsolar/" class="btn-instagram px-6 py-2.5 rounded-lg font-bold flex items-center gap-2 shadow-lg w-full md:w-auto justify-center">
+                    Veja mais no Instagram
+                </a>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <a href="/projetos#residencial" class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer block">
+            <img src="https://www.weg.net/solar/blog/wp-content/uploads/2024/12/02.jpg" alt="Projeto Residencial"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 opacity-90">
+            <span class="text-brand-primary font-bold text-xs uppercase tracking-wider mb-1">Residencial</span>
+            <h3 class="text-white font-bold text-lg">Casa de Praia - São João da Barra</h3>
+            </div>
+        </a>
+        <a href="/projetos#empresa" class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer block">
+        <img src="https://elysia.com.br/wp-content/uploads/2019/11/DJI_04551-1.jpg" alt="Projeto Empresarial"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 opacity-90">
+            <span class="text-brand-primary font-bold text-xs uppercase tracking-wider mb-1">Comercial</span>
+            <h3 class="text-white font-bold text-lg">Mercado Kitanda</h3>
+        </div>
+        </a>
+        <a href="/projetos#usinasolar" class="group relative h-64 rounded-2xl overflow-hidden cursor-pointer block">
+        <img src="https://crizelenergiasolar.com.br/wp-content/uploads/2024/02/usina_solar_de_investimento.jpg" alt="Projeto Solar"
+            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex flex-col justify-end p-6 opacity-90">
+            <span class="text-brand-primary font-bold text-xs uppercase tracking-wider mb-1">Rural</span>
+            <h3 class="text-white font-bold text-lg">Usina Solar</h3>
+        </div>
+    </a>
+</div>
+    </section>
+    <section id="sobre" class="py-24 bg-brand-black text-white relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gray-800/20 skew-x-12 transform translate-x-20"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-brand-primary font-bold text-lg tracking-wider uppercase mb-2">Líder Brasil Solar</h2>
+                    <h3 class="text-4xl md:text-5xl font-extrabold mb-6">Energia Renovável</h3>
+                    <div class="h-1 w-20 bg-brand-primary rounded-full mb-8"></div>
+                    
+                    <p class="text-gray-300 text-lg leading-relaxed mb-6">
+                        Somos especialistas em levar economia e sustentabilidade para você. Com uma equipe técnica altamente qualificada, garantimos a melhor performance para o seu sistema.
+                    </p>
+
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-xl font-medium">
+                            <svg class="w-6 h-6 text-brand-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Energia Solar para Residências, Empresas e Agro
+                        </li>
+                        <li class="flex items-center text-xl font-medium">
+                            <svg class="w-6 h-6 text-brand-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Projetos, Instalação e Manutenção
+                        </li>
+                        <li class="flex items-center text-xl font-medium">
+                            <svg class="w-6 h-6 text-brand-primary mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            Mais de 7 anos de experiência
+                        </li>
+                    </ul>
+                    <a href="/nosconheca/" class="inline-block border border-white px-8 py-3 rounded-lg hover:bg-white hover:text-brand-black transition-colors font-bold">
+                        Conheça nossa História
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="absolute -inset-4 bg-brand-primary/20 rounded-2xl transform rotate-3"></div>
+                    <img src="https://solledenergia.com.br/wp-content/uploads/2024/12/fazenda-solar-scaled-1.jpg" alt="Equipe Líder Brasil Solar" class="relative rounded-2xl shadow-2xl w-full object-cover h-[500px] transition-all duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-gray-900 text-gray-400 py-16 border-t border-gray-800 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+                <div class="col-span-1 md:col-span-1">
+                    <div class="flex items-center gap-2 mb-6">
+                        <span class="text-white font-bold text-lg">LÍDER BRASIL</span>
+                    </div>
+                    <p class="leading-relaxed mb-6">Soluções completas em energia fotovoltaica para você gerar sua própria energia e economizar.</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Navegação</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#solucoes" class="hover:text-brand-primary transition-colors">Residencial</a></li>
+                        <li><a href="#solucoes" class="hover:text-brand-primary transition-colors">Empresarial</a></li>
+                        <li><a href="#projetos" class="hover:text-brand-primary transition-colors">Projetos</a></li>
+                        <li><a href="#simulador" class="hover:text-brand-primary transition-colors">Simulador</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Contato</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path></svg>
+                            (22) 99948-7905
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                            contato@liderbrasilsolar.com.br
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-brand-primary mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                            Campos dos Goytacazes - RJ
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold uppercase tracking-wider mb-6">Siga-nos</h4>
+                    <div class="flex gap-4">
+                        <a href="https://www.instagram.com/liderbrasilsolar/" class="w-10 h-10 rounded bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors group">
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"></path>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                            </svg>
+                        </a>
+                        <a href="https://web.facebook.com/liderbrasildistribuidora" class="w-10 h-10 rounded bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors group">
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+                            </svg>
+                        </a>
+                        <a href="https://br.linkedin.com/company/l%C3%ADder-brasil-distribuidora" class="w-10 h-10 rounded bg-gray-800 flex items-center justify-center hover:bg-brand-primary hover:text-white transition-colors group">
+                            <svg class="w-5 h-5 text-gray-400 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500">
+                <p>&copy; 2017 Líder Brasil Solar. Uma empresa do Grupo Líder Brasil.</p>
+            </div>
+        </div>
+    </footer>
+    <script>
+    const btnMobile = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const slider = document.getElementById('conta-slider');
+    const displayConta = document.getElementById('valor-conta-display');
+    const displayAnual = document.getElementById('economia-anual');
+    const displayTotal = document.getElementById('economia-total');
+    if(btnMobile && mobileMenu){
+        btnMobile.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+    function formatCurrency(value) {
+        return value.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
+    function updateCalculator() {
+        if(!slider) return; 
+        const valorConta = parseInt(slider.value);
+        const economiaMensal = valorConta * 0.95;
+        const economiaAnual = economiaMensal * 12;
+        const economia25Anos = economiaAnual * 25;
+        
+        if(displayConta) displayConta.innerText = formatCurrency(valorConta);
+        if(displayAnual) displayAnual.innerText = formatCurrency(economiaAnual);
+        if(displayTotal) displayTotal.innerText = formatCurrency(economia25Anos);
+    }
+    if(slider) {
+        slider.addEventListener('input', updateCalculator);
+        updateCalculator();
+    }
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        loop: true,
+        speed: 800,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+            dynamicBullets: true,
+        },
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+    });
+</script>
+</body>
+</html>
